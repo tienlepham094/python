@@ -1,0 +1,5 @@
+2022-Mar-18-020443,ETL Job Started
+2022-Mar-18-020443,Extract phase Started
+2022-Mar-18-020559,Transform phase Started
+2022-Mar-18-020713,Load phase Started
+2022-Mar-18-020741,Load phase Ended
