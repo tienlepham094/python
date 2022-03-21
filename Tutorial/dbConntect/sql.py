@@ -12,12 +12,12 @@ db = mysql.connector.connect(
 mycursor = db.cursor()
 
 # create table
-# mycursor.execute("CREATE TABLE test(id SMALLINT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50) NOT NULL, gender ENUM('M', 'F') NOT NULL, created DATETIME NOT NULL)")
+mycursor.execute("CREATE TABLE test(id SMALLINT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50) NOT NULL, gender ENUM('M', 'F') NOT NULL, created DATETIME NOT NULL)")
 
 # insert value into table
-# mycursor.execute("INSERT INTO test(name,created,gender) VALUES (%s,%s,%s)",("Joe", datetime.now(), "M"))
+mycursor.execute("INSERT INTO test(name,created,gender) VALUES (%s,%s,%s)",("Joe", datetime.now(), "M"))
 # commit to database
-# db.commit()
+db.commit()
 
 
 # print the column with condition
@@ -27,7 +27,7 @@ for i in mycursor:
 	print(i)
 
 # alter table
-# mycursor.execute("ALTER TABLE test ADD COLUMN address VARCHAR(50) NOT NULL")
+mycursor.execute("ALTER TABLE test ADD COLUMN address VARCHAR(50) NOT NULL")
 
 # fetch all
 mycursor.execute("SELECT * FROM test")
@@ -35,3 +35,7 @@ myresult = mycursor.fetchall()
 
 for i in myresult:
 	print(i)
+
+#fetch one
+mycursor.execute("DESCRIBE test")
+print(mycursor.fetchone())
