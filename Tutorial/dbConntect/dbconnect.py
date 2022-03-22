@@ -10,7 +10,7 @@ db = mysql.connector.connect(
 mycursor = db.cursor()
 
  #create database
-mycursor.execute("CREATE DATABASE testdatabase")
+# mycursor.execute("CREATE DATABASE testdatabase")
 
 # CREATE table
 mycursor.execute("CREATE TABLE person( name VARCHAR(50), age SMALLINT UNSIGNED, person_id INT PRIMARY KEY)")
